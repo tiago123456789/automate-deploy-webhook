@@ -2,9 +2,11 @@ const express = require("express")
 const { execSync } = require("child_process")
 const app = express();
 
+const key = '9874697e-8132-4d1b-a611-29885f3fac8e'
+
 app.get("/update-app", async (req, res) => {
     const { query } = req.query;
-    if (query?.key !== '9874697e-8132-4d1b-a611-29885f3fac8e') {
+    if (query?.key !== key) {
         return res.status(403).json({ status: 403, error: "You can't execute this action" })
     }
 
