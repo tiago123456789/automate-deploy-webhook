@@ -4,7 +4,7 @@ const app = express();
 
 const key = '9874697e-8132-4d1b-a611-29885f3fac8e'
 
-app.get("/update-app", async (req, res) => {
+app.post("/update-app", async (req, res) => {
     const { query } = req;
     if (query.key != key) {
         return res.status(403).json({ status: 403, error: "You can't execute this action" })
