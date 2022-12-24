@@ -2,7 +2,7 @@ const express = require("express")
 const app = express();
 
 app.get("/", (req, res) => {
-    return res.json({ message: "Olá mundo atualizar novamente" })
+    return res.json({ message: "Olá mundo atualizar novamente 2" })
 })
 
 
